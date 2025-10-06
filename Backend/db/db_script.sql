@@ -5,7 +5,7 @@ CREATE TABLE usuario(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(60) NOT NULL,
     email VARCHAR(60) NOT NULL,
-    pass VARCHAR(60) NOT NULL
+    auth0_id VARCHAR(60) NOT NULL
 );
 
 CREATE TABLE materia(

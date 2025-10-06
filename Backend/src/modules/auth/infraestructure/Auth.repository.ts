@@ -41,6 +41,13 @@ class AuthRepository {
 
     return response.data;
   }
+
+  async getUserInfo(accessToken: string) {
+    const response = await axios.get(`https://${this.domain}/userinfo`, {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    });
+    return response.data;
+  }
 }
 
 export default new AuthRepository();

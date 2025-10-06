@@ -1,8 +1,8 @@
 export class User {
   constructor(
-    public readonly id: string,
     public email: string,
     public name: string,
-    public password: string
+    public auth0_id: string,
+    public readonly id?: string,
   ) {}
 }

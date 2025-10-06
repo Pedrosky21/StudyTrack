@@ -25,10 +25,10 @@ UserModel.init(
       },
       field: "email"
     },
-    password: {
+    auth0_id: {
       type: DataTypes.STRING,
       allowNull: false,
-      field: "pass"
+      field: "auth0_id"
     },
   },
   {

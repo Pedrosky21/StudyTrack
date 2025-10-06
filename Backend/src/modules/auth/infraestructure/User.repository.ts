@@ -6,13 +6,13 @@ class UserRepository {
     return await UserModel.create({
       name: user.name,
       email: user.email,
-      password: user.password,
+      auth0_id: user.auth0_id,
     });
   }
 
   async findByAuth0ID(auth0ID: string) {
     return await UserModel.findOne({
-      where: { password: auth0ID },
+      where: { auth0_id: auth0ID },
     });
   }
 }
